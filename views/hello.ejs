@@ -29,9 +29,14 @@
     <h1><%= title %></h1>
   </head>
   <div role="main">
-    <p id="msg"><%- content %></p>
-    <input type="text" name="num" id="num" />
-    <input type="button" id="btn" value="GET!" />
+    <% if (content != null) { %>
+      <ol>
+        <% for(var i in content) { %>
+          <% var obj = content[i]; %>
+          <li><a href="<%= obj.link%>"><%= obj.title%></a></li>
+        <% } %>
+      </ol>
+    <% } %>
   </div>
 </body>
 </html>
