@@ -82,4 +82,28 @@ router.post('/edit', (req, res, next) => {
   res.redirect('/hello');
 });
 
+router.get('/delete', (req, res, next) => {
+  var id = req.query.id;
+  db.serialize(() => {
+    var q = "select * from mydata where id = ?";
+    db.get(q, [id], (err, row) => {
+      if (!err) {
+        var data = {
+          title: 'Hello/Delete',
+          content: 'id = ' + id + 'のレコードを削除:',
+          mydata: row
+        };
+      }
+      res.render('hello/delete', data);
+    });
+  });
+});
+
+router.post('/delete', (req, res, next) => {
+  var id = req.body.id;
+  var q = "delete from mydata where id = ?";
+  db.run(q, id);
+  res.redirect('/hello');
+});
+
 module.exports = router;
