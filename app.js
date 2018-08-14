@@ -24,6 +24,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+var validator = require('express-validator');
+app.use(validator());
+
 var ajax = require('./routes/ajax');
 app.use('/ajax', ajax);
 

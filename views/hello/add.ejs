@@ -10,20 +10,20 @@
     <h1><%= title %></h1>
   </head>
   <div role="main">
-    <p><%= content %></p>
+    <p><%- content %></p>
     <form action="/hello/add" method="post">
       <table>
         <tr>
           <th>NAME</th>
-          <td><input type="text" name="name"></td>
+          <td><input type="text" name="name" value="<%= form.name %>"></td>
         </tr>
         <tr>
           <th>MAIL</th>
-          <td><input type="text" name="mail"></td>
+          <td><input type="text" name="mail" value="<%= form.mail %>"></td>
         </tr>
         <tr>
           <th>AGE</th>
-          <td><input type="text" name="age"></td>
+          <td><input type="text" name="age" value="<%= form.age %>"</td>
         </tr>
         <tr>
           <th></th>
