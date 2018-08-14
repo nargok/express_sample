@@ -24,6 +24,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+var ajax = require('./routes/ajax');
+app.use('/ajax', ajax);
+
 var session_opt = {
   secret: 'keyboard cat',
   resave: false,

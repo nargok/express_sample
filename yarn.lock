@@ -109,6 +109,10 @@ etag@~1.8.0, etag@~1.8.1:
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
 
+express-jquery@^1.8.3:
+  version "1.8.3"
+  resolved "https://registry.yarnpkg.com/express-jquery/-/express-jquery-1.8.3.tgz#902cc94c8e1147ad90bb61c566c76bee2dec72a7"
+
 express-session@^1.15.6:
   version "1.15.6"
   resolved "https://registry.yarnpkg.com/express-session/-/express-session-1.15.6.tgz#47b4160c88f42ab70fe8a508e31cbff76757ab0a"
@@ -196,6 +200,10 @@ inherits@2.0.3:
 ipaddr.js@1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/ipaddr.js/-/ipaddr.js-1.4.0.tgz#296aca878a821816e5b85d0a285a99bcff4582f0"
+
+jquery@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
 
 media-typer@0.3.0:
   version "0.3.0"
